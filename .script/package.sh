@@ -11,9 +11,9 @@ for dir in $(find . -type d -regex './[^/]+/[0-9]+\.[0-9]+\.[0-9]+' | sed 's|^\.
     tar -czf "dist/$pkg" -C "$(dirname "$dir")" "$(basename "$dir")"
 done
 
-# Generate index.md
-echo "Generating index.md..."
-cat > dist/index.md << 'EOF'
+# Generate README.md
+echo "Generating README.md"
+cat > dist/README.md << 'EOF'
 # Package Index
 
 ## Available Packages
@@ -24,6 +24,6 @@ EOF
 for pkg in dist/*.tar.gz; do
     if [ -f "$pkg" ]; then
         file=$(basename "$pkg")
-        echo "- [$file]($file)" >> dist/index.md
+        echo "- [$file]($file)" >> dist/README.md
     fi
 done
