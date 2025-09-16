@@ -6,12 +6,24 @@ mkdir -p dist
 for dir in $(find . -type d -regex './[^/]+/[0-9]+\.[0-9]+\.[0-9]+' | sed 's|^\./||'); do
     name=$(echo "$dir" | cut -d'/' -f1)
     tag=$(echo "$dir" | cut -d'/' -f2)
-    package="${name}:${tag}.tar.gz"
-    echo "Compressing $dir to $package..."
-    tar -czf "dist/$package" -C "$(dirname "$dir")" "$(basename "$dir")"
-    echo "Created: dist/$package"
+    pkg="${name}:${tag}.tar.gz"
+    echo "Compress $dir to $pkg"
+    tar -czf "dist/$pkg" -C "$(dirname "$dir")" "$(basename "$dir")"
 done
 
-echo ""
-echo "Created archives:"
-ls -lh dist/
+# Generate index.md
+echo "Generating index.md..."
+cat > dist/index.md << 'EOF'
+# Package Index
+
+## Available Packages
+
+EOF
+
+# List all packages
+for pkg in dist/*.tar.gz; do
+    if [ -f "$pkg" ]; then
+        file=$(basename "$pkg")
+        echo "- [$file]($file)" >> dist/index.md
+    fi
+done
