@@ -1,0 +1,15 @@
+ports:
+  - {name: scl, type: wire, bit: 1, direct: in, side: right}
+  - {name: miso, type: wire, bit: 1, direct: in, side: right}
+  - {name: mosi, type: wire, bit: 1, direct: out, side: right}
+params: []
+software:
+  className: ADC
+  memSize: 0x10
+  methods:
+    - note: Read analog value (ch=0~7, ret=0~1023)
+      name: read
+      type: void
+      args:
+        - type: uint32_t
+          name: ch

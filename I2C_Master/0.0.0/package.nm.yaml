@@ -1,0 +1,34 @@
+ports:
+  - {name: scl, type: wire, bit: 1, direct: out, side: right}
+  - {name: sda_io, type: wire, bit: 1, direct: out, side: right}
+  - {name: sda_tx, type: wire, bit: 1, direct: out, side: right}
+  - {name: sda_rx, type: wire, bit: 1, direct: in, side: right}
+params: []
+software:
+  className: I2C_Master
+  memSize: 0x10
+  methods:
+    - note: Send I2C (addr,reg,len)
+      name: send
+      type: void
+      args:
+        - type: uint8_t
+          name: addr
+        - type: uint8_t
+          name: reg
+        - type: uint8_t
+          name: msg_len
+        - type: I2C::Next
+          name: continue
+    - note: Receive I2C
+      name: recv
+      type: char*
+      args:
+        - type: uint8_t
+          name: addr
+        - type: uint8_t
+          name: reg
+        - type: uint8_t
+          name: msg_len
+        - type: I2C::Next
+          name: continue

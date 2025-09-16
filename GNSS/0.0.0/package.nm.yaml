@@ -1,0 +1,23 @@
+ports:
+  - {name: scl, type: wire, bit: 1, direct: out, side: left}
+  - {name: mosi, type: wire, bit: 1, direct: out, side: left}
+  - {name: miso, type: wire, bit: 1, direct: in, side: left}
+  - {name: trig, type: wire, bit: 1, direct: in, side: right}
+  - {name: valid, type: wire, bit: 1, direct: out, side: right}
+  - {name: lat, type: wire, bit: 8, direct: out, side: right}
+  - {name: lng, type: wire, bit: 8, direct: out, side: right}
+params: []
+software:
+  className: GNSS
+  memSize: 0x10
+  methods:
+    - note: Send Control Request
+      name: sendCtrl
+      type: void
+      args:
+        - type: Req
+          name: req
+    - note: Get Telemetry Responce
+      name: getTelem
+      type: Res
+      args: []

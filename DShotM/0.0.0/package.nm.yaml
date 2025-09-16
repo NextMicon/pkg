@@ -1,0 +1,20 @@
+ports:
+  - {name: io, type: wire, bit: 1, direct: out, side: right}
+  - {name: tx, type: wire, bit: 1, direct: out, side: right}
+  - {name: rx, type: wire, bit: 1, direct: in, side: right}
+params: 
+  - {name: speed, option: [1200,600,300,150] }
+software:
+  className: DShotM
+  memSize: 0x10
+  methods:
+    - note: Send Control Request
+      name: sendCtrl
+      type: void
+      args:
+        - type: Req
+          name: req
+    - note: Get Telemetry Responce
+      name: getTelem
+      type: Res
+      args: []

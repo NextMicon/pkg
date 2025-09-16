@@ -1,0 +1,39 @@
+ports: 
+  - {name: w_trig, type: wire, bit: 1, direct: out, side: left}
+  - {name: w_valid, type: wire, bit: 1, direct: in, side: left}
+  - {name: w_x, type: wire, bit: 8, direct: in, side: left}
+  - {name: w_y, type: wire, bit: 8, direct: in, side: left}
+  - {name: w_z, type: wire, bit: 8, direct: in, side: left}
+  - {name: a_trig, type: wire, bit: 1, direct: out, side: left}
+  - {name: a_valid, type: wire, bit: 1, direct: in, side: left}
+  - {name: a_x, type: wire, bit: 8, direct: in, side: left}
+  - {name: a_y, type: wire, bit: 8, direct: in, side: left}
+  - {name: a_z, type: wire, bit: 8, direct: in, side: left}
+  - {name: gnss_trig, type: wire, bit: 1, direct: out, side: left}
+  - {name: gnss_valid, type: wire, bit: 1, direct: in, side: left}
+  - {name: gnss_lat, type: wire, bit: 8, direct: in, side: left}
+  - {name: gnss_lng, type: wire, bit: 8, direct: in, side: left}
+  - {name: x, type: wire, bit: 8, direct: out, side: right}
+  - {name: y, type: wire, bit: 8, direct: out, side: right}
+  - {name: z, type: wire, bit: 8, direct: out, side: right}
+  - {name: vx, type: wire, bit: 8, direct: out, side: right}
+  - {name: vy, type: wire, bit: 8, direct: out, side: right}
+  - {name: vz, type: wire, bit: 8, direct: out, side: right}
+  - {name: ax, type: wire, bit: 8, direct: out, side: right}
+  - {name: ay, type: wire, bit: 8, direct: out, side: right}
+  - {name: az, type: wire, bit: 8, direct: out, side: right}
+params: []
+software:
+  className: ESKF
+  memSize: 0x20
+  methods:
+    - note: Set Gain
+      name: sendCtrl
+      type: void
+      args:
+        - type: Req
+          name: req
+    - note: Get Telemetry Responce
+      name: getTelem
+      type: Res
+      args: []

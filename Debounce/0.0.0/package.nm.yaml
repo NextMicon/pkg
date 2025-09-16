@@ -1,0 +1,6 @@
+ports:
+  - {name: in, type: wire, bit: 1, direct: in, side: left}
+  - {name: rise, type: :wire, bit: 1, direct: out, side: right}
+  - {name: out, type: :wire, bit: 1, direct: out, side: right}
+  - {name: fall, type: :wire, bit: 1, direct: out, side: right}
+params: []

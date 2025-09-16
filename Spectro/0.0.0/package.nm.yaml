@@ -1,0 +1,11 @@
+ports:
+  - {name: in, type: wire, bit: 12, direct: in, side: left}
+  - {name: sample, type: wire, bit: 1, direct: in, side: left}
+  - {name: done, type: wire, bit: 1, direct: out, side: right}
+params: []
+size: [240, 80]
+textX: 0
+software:
+  className: Spectro
+  memSize: 0x1000
+  member: []

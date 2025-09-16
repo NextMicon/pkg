@@ -1,0 +1,9 @@
+ports: 
+  - {name: reset_n, type: wire, bit: 1, direct: out, side: left}
+  - {name: cs_n, type: wire, bit: 1, direct: out, side: left}
+  - {name: clk_en, type: wire, bit: 1, direct: out, side: left}
+  - {name: clk_t, type: wire, bit: 1, direct: out, side: left}
+  - {name: clk_n, type: wire, bit: 1, direct: out, side: left}
+  - {name: dq, type: wire, bit: 1, direct: out, side: left}
+  - {name: dqs, type: wire, bit: 1, direct: out, side: left}
+params: []
