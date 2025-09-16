@@ -24,6 +24,6 @@ EOF
 for pkg in dist/*.tar.gz; do
     if [ -f "$pkg" ]; then
         file=$(basename "$pkg")
-        echo "- [$file]($file)" >> dist/README.md
+        echo "- [$file](./$file)" >> dist/README.md
     fi
 done
