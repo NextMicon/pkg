@@ -7,8 +7,23 @@ for dir in $(find . -type d -regex './[^/]+/[0-9]+\.[0-9]+\.[0-9]+' | sed 's|^\.
     name=$(echo "$dir" | cut -d'/' -f1)
     tag=$(echo "$dir" | cut -d'/' -f2)
     pkg="${name}:${tag}.tar.gz"
-    echo "Compress $dir to $pkg"
+
+    echo " - $dir -> $pkg"
+
+    # Package
     tar -czf "dist/$pkg" -C "$(dirname "$dir")" "$(basename "$dir")"
+    
+    # Documents
+    mkdir -p "dist/${name}:${tag}"
+    if [ -f "$dir/README.md" ]; then
+        cp "$dir/README.md" "dist/${name}:${tag}/README.md"
+    else
+        touch "dist/${name}:${tag}/README.md"
+        echo "# ${name}:${tag}" > "dist/${name}:${tag}/README.md"
+    fi
+    if [ -d "$dir/doc" ]; then
+        cp -r "$dir/doc" "dist/${name}:${tag}/doc"
+    fi
 done
 
 # Generate README.md
