@@ -1,0 +1,65 @@
+pkgs:
+  - name: ADC:0.0.0.tar.gz
+    hash: 529bc965d2d90fb6376133cf09d040db992406e196354bec9bc340a27beefd60
+  - name: AND:0.0.0.tar.gz
+    hash: d58e34ac881842132d569a92c62a5688682e2e7573167256db63ec3470f9c7c3
+  - name: Acc:0.0.0.tar.gz
+    hash: 3ef5c9cbea71e6b0134bbafcbf47268f1647ccf4be65fb9db0fa4e17015da0fe
+  - name: Analog:0.0.0.tar.gz
+    hash: 4cdfb256271f289b81dfa1e5a8ae5f79c4b1c6e520f971552046e06c892b60b9
+  - name: Counter:0.0.0.tar.gz
+    hash: d1758159ea63d36c31e71f92ec74f9ccb7f10a73b01453a586bacf9dbb6d710e
+  - name: DDR4:0.0.0.tar.gz
+    hash: 9237e420e5f065a876321259b5f6a1c76899f1ef75f0442281bbd71d20f037b2
+  - name: DShotM:0.0.0.tar.gz
+    hash: 05f5203d30b3690bc00849daf5411047cff3c9d1a66fd39e65f7402356a62255
+  - name: Debounce:0.0.0.tar.gz
+    hash: e48cd0b9c9a0144c93cdf69ec8fdbad2dc4cffec6898279a72a3a0c079c5dc47
+  - name: Digital:0.0.0.tar.gz
+    hash: b6f0ea46af5b02310977ae592590b0aa47ebdb930ed1d266d7a7a1ef7376de4c
+  - name: ESKF_3:0.0.0.tar.gz
+    hash: 015fa5a63a63a03c4f7950503cc00de25c715725bd0718deae989ca9f61409a3
+  - name: GNSS:0.0.0.tar.gz
+    hash: ff0feb57ccf8280cb29d82e06f0d83716fee74f807c696562479d339ddea14b8
+  - name: Gyro:0.0.0.tar.gz
+    hash: 5f29a5b617ed1b1065bd815ae7fcb3bc62299b71b169e6949765cb54093060d4
+  - name: I2C_Master:0.0.0.tar.gz
+    hash: aed13ed2000ab00661f142738a210ae1d7cd0a6c131478502b1fc3a88cf74fa0
+  - name: Matmul:0.0.0.tar.gz
+    hash: 5a1fc04e08224e9d1578832a156b02b2af49720d141cb226904026fdb4201c88
+  - name: Mixier:0.0.0.tar.gz
+    hash: eac1eca0414b9f541f74d1771709dbfbcaea4f190a8be9b3cc184d45673066ca
+  - name: Mux:0.0.0.tar.gz
+    hash: d0d662160b86b7fda093aa38d5b323abe74b595a36ef78f3a86ec4a86ebe931d
+  - name: Norm:0.0.0.tar.gz
+    hash: 683e17583459e339d7665ca3b6e503221fbeadeddccda70975eaf043a9d12afe
+  - name: OR:0.0.0.tar.gz
+    hash: d58e34ac881842132d569a92c62a5688682e2e7573167256db63ec3470f9c7c3
+  - name: RotEnc:0.0.0.tar.gz
+    hash: 18afbd3fb91e48ba10a3bdb85ce671f6b05c85859545846d232aa2a0d355c02e
+  - name: SPIDAC:0.0.0.tar.gz
+    hash: 9cb9f570c393e5eb82ff92c2fccf92b101cf8a5d7c39f8316d3e26f9f18414f3
+  - name: SPI_Master:0.0.0.tar.gz
+    hash: 6f27740b3e8f41dc4f37d99a96fa035cd20ac4f636e19b2f984dd7fcee3cced4
+  - name: Sawtooth:0.0.0.tar.gz
+    hash: 5177d3b0a1cc7ad89459e894c0ab47f5cc6d0f4b82b63e3fc44b471e554918d6
+  - name: Serial:0.0.0.tar.gz
+    hash: 76a3f4d23a438f361c381a1151ff59855b6cb02e99f6c88775803ab8d99b78f9
+  - name: Softmax:0.0.0.tar.gz
+    hash: a16b4dbb1e79339b32228cab1c95d6125e2aee5ef71428f435ae8e5ef92715f3
+  - name: Spectro:0.0.0.tar.gz
+    hash: e153256790d6c41f52dd811cc3f78e26bda6bb6e4213522d09c82fb16914b104
+  - name: Square:0.0.0.tar.gz
+    hash: 861fbd1ca8e31f93aa3d68d91b028dafb6f263c3b725f86a44a6e63b86baf1e6
+  - name: Triangle:0.0.0.tar.gz
+    hash: af1d7749a3fe3a4d968a7b871d1956db0192d0c20fff2170016acd1d7b143b47
+  - name: i2c:0.1.0.tar.gz
+    hash: 53df85f8cb3f71d4b0fe6c54b182bb3dd8c5ed72d5eca4f75736e9a7728435b7
+  - name: spi:0.1.0.tar.gz
+    hash: 53df85f8cb3f71d4b0fe6c54b182bb3dd8c5ed72d5eca4f75736e9a7728435b7
+  - name: uart:0.1.0.tar.gz
+    hash: 53df85f8cb3f71d4b0fe6c54b182bb3dd8c5ed72d5eca4f75736e9a7728435b7
+  - name: uart:0.2.0.tar.gz
+    hash: f0672bb19ddeeb59f4ce25d54edb0225de0e9d580228cd57df6a5584a038fb11
+  - name: uart:1.0.0.tar.gz
+    hash: b74508b602b4f3dbe0b0d205e0fdb9c3ef78d3b52aa3925cdbe9849c93bb1be5
