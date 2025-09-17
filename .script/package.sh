@@ -12,18 +12,18 @@ for dir in $(find . -type d -regex './[^/]+/[0-9]+\.[0-9]+\.[0-9]+' | sed 's|^\.
 done
 
 # Generate README.md
-echo "Generating README.md"
-cat > dist/README.md << 'EOF'
-# Package Index
-
-## Available Packages
-
-EOF
+echo "Generating README.md & index.yaml"
+touch dist/README.md
+touch dist/index.yaml
+echo "pkgs:" > dist/index.yaml
 
 # List all packages
 for pkg in dist/*.tar.gz; do
     if [ -f "$pkg" ]; then
         file=$(basename "$pkg")
+        hash=$(sha256sum "$pkg" | awk '{print $1}')
         echo "- [$file](./$file)" >> dist/README.md
+        echo "  - name: $file" >> dist/index.yaml
+        echo "    hash: $hash" >> dist/index.yaml
     fi
 done
