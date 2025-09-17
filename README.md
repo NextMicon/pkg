@@ -11,3 +11,9 @@
 3. [MAY] `https://<base>/` - HTML file listing all available packages with links to download them.
 4. [MAY] `https://<base>/<package>:<tag>` - Documentation HTML for package.
 5. [MAY] `https://<base>/<package>:<tag>/doc` - Extra recorces for documentation.
+
+## Local Development
+
+```
+pnpm dev
+```
