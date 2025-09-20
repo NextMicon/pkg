@@ -6,8 +6,8 @@
     "dev": "vite",
     "serve": "pnpm dlx http-server dist -p 8080 -c-1",
     "serve:watch": "pnpm dlx browser-sync start --server dist --files 'dist/**/*' --port 3000",
-    "build": "bash .script/package.sh",
-    "build:watch": "pnpm dlx nodemon --watch pkg --ext '*' --exec 'pnpm run build'"
+    "build": "bash package.sh",
+    "build:watch": "pnpm dlx nodemon --watch pkg --ext '*' --exec 'pnpm build'"
   },
   "devDependencies": {
     "vite": "^7.1.5"
